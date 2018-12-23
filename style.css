@@ -1,0 +1,288 @@
+/* Definitions des polices personnalisees */
+
+@font-face {
+	font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+    url('polices/ballpark.woff') format('woff'),
+    url('polices/ballpark.ttf') format('truetype'),
+    url('polices/ballpark.svg#BallparkWeiner') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Elements principaux de la page */
+
+body {
+	background: url('images/fond_jaune.png');
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+	color: #181818;
+}
+
+#bloc_page {
+	width: 900px;
+	margin: auto;
+}
+
+section h1, footer h1, nav a {
+	font-family: Dayrom, serif;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+/* L'en-tete */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	background: url('images/separateur.png') repeat-x bottom;
+}
+
+#titre_principal {
+	display: flex;
+	flex-direction: column;
+}
+
+#logo {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+header h1 {
+	font-family: 'BallparkWeiner', serif;
+	font-weight: normal;
+	font-size: 2.5em;
+	margin: 0 0 0 10px;
+	color: pink; 
+}
+
+header h2 {
+	font-family: 'Dayrom', serif;
+	font-weight: normal;
+	font-size: 1.1em;
+	margin-top: 0;
+}
+
+/* Navigation */
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+}
+
+nav li {
+	margin-right: 15px;
+}
+
+nav a {
+	font-size: 1.3em;
+	color: #181818;
+	padding-bottom: 3px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: #760001;
+	border-bottom: 3px solid #760001;
+}
+
+/* Banniere */
+
+#banniere_image {
+	margin-top: 15px;
+	background: url('images/sanfrancisco.jpg') no-repeat;
+	height: 200px;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 4px 4px #1c1a19;
+	margin-bottom: 25px;
+}
+
+#banniere_description {
+	position: absolute;
+	bottom: 0;
+	height: 35px;
+	color: white;
+	background: rgba(27, 27, 27, 0.5);
+	width: 99.5%;
+	border-radius: 0 0 5px 5px;
+	padding: 15px 0 0 4px;
+	/*font-size: 0.8em;*/
+}
+
+.bouton_rouge {
+	height: 25px;
+	position: absolute;
+	right: 8px;
+	bottom: 6px;
+	color: #fff;
+	text-decoration: none;
+	background: linear-gradient(#8e2a0f, #b33310);
+	padding: 5px 5px 0 5px;
+	border-radius: 5px;
+}
+
+/* Section */
+
+section {
+	display: flex;
+	margin-bottom: 20px;
+	align-items: flex-start;
+}
+
+article, aside {
+	text-align: justify;
+}
+
+article {
+	margin-right: 20px;
+	flex: 3;
+}
+
+.ico_categorie {
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+article p {
+	font-size: 0.9em;
+}
+
+aside {
+	flex: 1.2;
+	position: relative;
+	color: #fff;
+	background-color: #706b64;
+	border-radius: 5px;
+	padding: 10px;
+	box-shadow: 0 2px 4px #29373f;
+	font-size: 0.9em;
+}
+
+#fleche_bulle {
+	position: absolute;
+	left: -12px;
+	top: 100px;
+}
+
+#photo_zozor {
+	text-align: center;
+}
+
+#photo_zozor img {
+	border: 1px solid #181818;
+}
+
+aside img {
+	margin-right: 5px;
+}
+
+/* footer */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	background: url('images/ico_top.png') no-repeat top center,
+	url('images/separateur.png') repeat-x top,
+	url('images/ombre.png') repeat-x top;
+	padding-top: 25px;
+}
+
+footer h1 {
+	font-size: 1.1em;
+}
+
+footer p, footer a {
+	font-size: 0.8em;
+}
+
+#tweet {
+	width: 28%;
+}
+
+#mes_photos {
+	width: 35%;
+}
+
+#mes_amis {
+	width: 35%;
+}
+
+#mes_photos img {
+	border: 1px solid #181818;
+	margin-right: 2px;
+}
+
+#listes_amis {
+	display: flex;
+	justify-content: space-between;
+}
+
+#listes_amis ul {
+	list-style-image: url('images/ico_liensexterne.png');
+	margin-top: 0;
+	padding-left: 12px;
+}
+
+#listes_amis a {
+	text-decoration: none;
+	color: #181818;
+}
+
+@media screen and (max-width: 1024px) {
+	#bloc_page {
+		width: auto;
+	}
+
+	nav ul {
+		flex-direction: column;
+	}
+
+	nav a {
+		font-size: 1.1em;
+	}
+
+	nav a:hover {
+		border-bottom: none;
+	}
+
+	#banniere_image {
+		display: none;
+	}
+
+	section {
+		flex-direction: column;
+	}
+
+	article, aside {
+		width: auto;
+		margin-bottom: 15px;
+	}
+
+	#fleche_bulle {
+		display: none;
+	}
+
+	#photo_zozor img {
+		width: 110px;
+		float: left;
+		margin-right: 15px;
+	}
+
+	aside p:last-child {
+		text-align: center;
+	}
+}
